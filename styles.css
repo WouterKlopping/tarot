@@ -181,6 +181,16 @@ body {
     display: none;
 }
 
+/* New styles for play and pause icons */
+#symbolism-audio .icon-play,
+#symbolism-audio .icon-pause {
+    transition: opacity 0.3s ease;
+}
+
+#symbolism-audio .icon-pause {
+    display: none;
+}
+
 @media (min-width: 601px) {
     .container {
         width: 500px;
