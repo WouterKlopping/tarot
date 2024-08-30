@@ -604,8 +604,19 @@ function drawCard() {
     audioButtons.style.display = 'flex';
 }
 
-function playAudio() {
-    cardAudio.play();
+function toggleAudio(button) {
+    const iconPlay = button.querySelector('.icon-play');
+    const iconPause = button.querySelector('.icon-pause');
+    
+    if (cardAudio.paused) {
+        cardAudio.play();
+        iconPlay.style.display = 'none';
+        iconPause.style.display = 'inline-block';
+    } else {
+        cardAudio.pause();
+        iconPlay.style.display = 'inline-block';
+        iconPause.style.display = 'none';
+    }
 }
 
 function refreshCard() {
@@ -618,18 +629,23 @@ function refreshCard() {
 }
 
 videoCard.addEventListener('click', drawCard);
+
+document.getElementById('symbolism-audio').addEventListener('click', function() {
+    toggleAudio(this);
+});
+
+document.getElementById('meaning-audio').addEventListener('click', function() {
+    toggleAudio(this);
+});
+
 cardAudio.addEventListener('ended', () => {
-    audioButtons.querySelector('button').textContent = 'Play Audio';
+    const activeButton = document.querySelector('#audio-buttons button .icon-pause:not([style*="display: none"])').closest('button');
+    const iconPlay = activeButton.querySelector('.icon-play');
+    const iconPause = activeButton.querySelector('.icon-pause');
+    iconPlay.style.display = 'inline-block';
+    iconPause.style.display = 'none';
 });
-audioButtons.querySelector('button').addEventListener('click', () => {
-    if (cardAudio.paused) {
-        cardAudio.play();
-        audioButtons.querySelector('button').textContent = 'Pause Audio';
-    } else {
-        cardAudio.pause();
-        audioButtons.querySelector('button').textContent = 'Play Audio';
-    }
-});
+
 refreshButton.addEventListener('click', refreshCard);
 
 // Check if we're in development mode (you can set this based on your needs)
