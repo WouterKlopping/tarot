@@ -1,0 +1,223 @@
+@import url("https://use.typekit.net/yxu1ytt.css");
+
+body {
+    font-family: "adobe-caslon-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F5DCB8;
+    color: #333;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.paper-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('paper_texture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    max-width: 90%;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    margin-bottom: 10px;
+}
+
+.tarot-deck {
+    width: 280px;
+    height: 466px; /* Aspect ratio 3:5 for 280px width */
+    border: 4px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.tarot-deck:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.3);
+}
+
+#video-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+#video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#card {
+    background-color: transparent;
+    width: 280px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-image-container {
+    position: relative;
+    width: 280px;
+    height: 466px;
+    margin-bottom: 8px;
+}
+
+#card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card-info {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#card-title {
+    font-family: "adobe-caslon-pro", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    margin: 8px 0;
+    line-height: 1.2;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+#card-description {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.4em;
+}
+
+#audio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+#symbolism-audio, #meaning-audio, #refresh-button, #view-all-cards {
+    font-family: "adobe-caslon-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #DAC373;
+    color: #35242A;
+    border: 2px solid #35242A;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+#symbolism-audio:hover, #meaning-audio:hover, #refresh-button:hover, #view-all-cards:hover {
+    background-color: #c5af5e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 601px) {
+    .container {
+        width: 500px;
+    }
+
+    #card-container,
+    #card,
+    #card-image-container,
+    .tarot-deck {
+        width: 360px;
+    }
+
+    #card-image-container,
+    .tarot-deck {
+        height: 600px; /* Aspect ratio 3:5 for 360px width */
+    }
+
+    #card-title {
+        font-size: 42px;
+    }
+
+    #card-description {
+        font-size: 26px;
+    }
+
+    #symbolism-audio, #meaning-audio, #refresh-button, #view-all-cards {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 600px;
+    }
+
+    #card-title {
+        font-size: 48px;
+    }
+}
