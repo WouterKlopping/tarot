@@ -117,32 +117,32 @@ body {
     font-family: "adobe-caslon-pro", serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 36px;
+    font-size: 32px;
     margin: 8px 0;
     line-height: 1.2;
     width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #card-description {
-    font-size: 24px;
-    line-height: 1.2;
+    font-size: 20px;
+    line-height: 1.4;
     margin-top: 4px;
     margin-bottom: 8px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: 2.4em;
+    text-align: center;
+    height: 2.8em;
 }
 
 #audio-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
     margin-top: 20px;
     width: 100%;
@@ -157,7 +157,7 @@ body {
     color: #35242A;
     border: 2px solid #35242A;
     padding: 12px 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -165,8 +165,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: 100%;
-    height: 100%;
+    width: calc(50% - 6px);
     text-align: center;
 }
 
@@ -177,27 +176,17 @@ body {
 }
 
 #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
 }
 
-#symbolism-audio {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-#meaning-audio {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-}
-
-#refresh-button {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-#view-all-cards {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+#symbolism-audio span, #meaning-audio span, #refresh-button span, #view-all-cards span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .hidden {
@@ -222,11 +211,11 @@ body {
     }
 
     #card-title {
-        font-size: 42px;
+        font-size: 36px;
     }
 
     #card-description {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     #audio-buttons {
@@ -234,8 +223,12 @@ body {
     }
 
     #symbolism-audio, #meaning-audio, #refresh-button, #view-all-cards {
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 14px 12px;
+    }
+
+    #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
+        font-size: 1.3rem;
     }
 }
 
@@ -245,7 +238,11 @@ body {
     }
 
     #card-title {
-        font-size: 48px;
+        font-size: 40px;
+    }
+
+    #card-description {
+        font-size: 24px;
     }
 
     #audio-buttons {
@@ -253,7 +250,11 @@ body {
     }
 
     #symbolism-audio, #meaning-audio, #refresh-button, #view-all-cards {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         padding: 16px 14px;
+    }
+
+    #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
+        font-size: 1.4rem;
     }
 }
