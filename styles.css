@@ -156,7 +156,7 @@ body {
     background-color: #DAC373;
     color: #35242A;
     border: 2px solid #35242A;
-    padding: 12px 10px;
+    padding: 7px 10px 17px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 4px;
@@ -224,7 +224,7 @@ body {
 
     #symbolism-audio, #meaning-audio, #refresh-button, #view-all-cards {
         font-size: 1.1rem;
-        padding: 14px 12px;
+        padding: 9px 12px 19px;
     }
 
     #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
@@ -251,7 +251,7 @@ body {
 
     #symbolism-audio, #meaning-audio, #refresh-button, #view-all-cards {
         font-size: 1.2rem;
-        padding: 16px 14px;
+        padding: 11px 14px 21px;
     }
 
     #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
