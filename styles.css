@@ -156,7 +156,7 @@ body {
     background-color: #DAC373;
     color: #35242A;
     border: 2px solid #35242A;
-    padding: 7px 10px 17px;
+    padding: 10px 15px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 4px;
@@ -167,6 +167,9 @@ body {
     gap: 8px;
     width: calc(50% - 6px);
     text-align: center;
+    height: 50px; /* Set a fixed height for consistency */
+    box-sizing: border-box;
+    line-height: 1.2; /* Adjust line height for better vertical alignment */
 }
 
 #symbolism-audio:hover, #meaning-audio:hover, #refresh-button:hover, #view-all-cards:hover {
@@ -177,16 +180,16 @@ body {
 
 #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
     font-size: 1.2rem;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    vertical-align: middle;
 }
 
 #symbolism-audio span, #meaning-audio span, #refresh-button span, #view-all-cards span {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    vertical-align: middle;
+    justify-content: center;
+    flex: 1;
 }
 
 .hidden {
@@ -224,7 +227,7 @@ body {
 
     #symbolism-audio, #meaning-audio, #refresh-button, #view-all-cards {
         font-size: 1.1rem;
-        padding: 9px 12px 19px;
+        height: 55px; /* Slightly increase height for larger screens */
     }
 
     #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
@@ -251,7 +254,7 @@ body {
 
     #symbolism-audio, #meaning-audio, #refresh-button, #view-all-cards {
         font-size: 1.2rem;
-        padding: 11px 14px 21px;
+        height: 60px; /* Further increase height for larger screens */
     }
 
     #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
