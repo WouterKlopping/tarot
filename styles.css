@@ -169,7 +169,7 @@ body {
     text-align: center;
     height: 50px;
     box-sizing: border-box;
-    line-height: 1.2;
+    line-height: 1;
     position: relative;
 }
 
@@ -181,18 +181,16 @@ body {
 
 #symbolism-audio i, #meaning-audio i, #refresh-button i, #view-all-cards i {
     font-size: 1.2rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 20px;
-    margin-right: 5px;
+    flex-shrink: 0;
 }
 
 #symbolism-audio span, #meaning-audio span, #refresh-button span, #view-all-cards span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .hidden {
